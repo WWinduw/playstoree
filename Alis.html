@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recrutamento - Alis Academy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #1e1e2e, #121212);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      color: #fff;
+    }
+    .container {
+      width: 95%;
+      max-width: 600px;
+      background: rgba(30, 30, 46, 0.95);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
+      animation: fadeIn 1s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    h2 {
+      font-weight: 600;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    form label {
+      display: block;
+      font-size: 14px;
+      margin-top: 15px;
+      margin-bottom: 5px;
+    }
+    form input,
+    form textarea,
+    form select {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      font-size: 14px;
+      transition: background 0.3s, box-shadow 0.3s;
+    }
+    form input:focus,
+    form textarea:focus,
+    form select:focus {
+      background: rgba(255, 255, 255, 0.15);
+      outline: none;
+      box-shadow: 0 0 5px 2px #ff4500;
+    }
+    form select {
+      height: 45px;
+    }
+    button {
+      width: 100%;
+      padding: 15px;
+      margin-top: 25px;
+      background: #ff4500;
+      border: none;
+      border-radius: 8px;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.3s;
+    }
+    button:hover {
+      background: #e03e00;
+      transform: scale(1.03);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>📜 Recrutamento - Alis Academy</h2>
+    <form action="enviar.php" method="POST">
+      <label>Nick (Epic/Steam):</label>
+      <input type="text" name="nome" placeholder="Seu Nick" required>
+
+      <label>Idade:</label>
+      <input type="number" name="idade" placeholder="Sua idade" required>
+
+      <label>País:</label>
+      <input type="text" name="pais" placeholder="Seu país" required>
+
+      <label>Discord:</label>
+      <input type="text" name="discord" placeholder="Seu Discord (opcional)">
+
+      <label>Disponibilidade de Horário:</label>
+      <input type="text" name="horario" placeholder="Ex: Fins de semana, noites, etc." required>
+
+      <label>Categoria de Interesse:</label>
+      <select name="categoria[]" multiple>
+        <option value="CS:GO/CS2">CS:GO/CS2</option>
+        <option value="Rocket League">Rocket League</option>
+        <option value="Designer">Designer</option>
+        <option value="Editor de Vídeo">Editor de Vídeo</option>
+      </select>
+
+      <label>Por que quer entrar na Alis Academy?</label>
+      <textarea name="motivo" rows="4" placeholder="Conte-nos sua motivação" required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+</body>
+</html>
