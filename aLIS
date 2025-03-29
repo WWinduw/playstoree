@@ -71,13 +71,13 @@
     <div class="container">
         <h2>📜 Recrutamento - Alis Academy</h2>
         <form action="enviar.php" method="POST">
-            <label>Nome/Nickname:</label>
+            <label>Nick Epic\Steam:</label>
             <input type="text" name="nome" required>
             
             <label>Idade:</label>
             <input type="number" name="idade" required>
             
-            <label>País/Cidade:</label>
+            <label>País:</label>
             <input type="text" name="pais" required>
             
             <label>Discord:</label>
@@ -88,7 +88,7 @@
             
             <label>Categoria de Interesse:</label>
             <select name="categoria[]" multiple>
-                <option value="CS:GO/CS2">CS:GO/CS2</option>
+                <option value="CS:GO/CS2">CS2:</option>
                 <option value="Rocket League">Rocket League</option>
                 <option value="Designer">Designer</option>
                 <option value="Editor de Vídeo">Editor de Vídeo</option>
